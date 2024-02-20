@@ -1,5 +1,5 @@
 #include <stdio.h>
-int main (volid) {
+int main(volid){
 	puts("Programming is like building a multilingual puzzle\n");
-	return ;
+	return (0);
 }
