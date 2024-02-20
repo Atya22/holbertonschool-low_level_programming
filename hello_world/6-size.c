@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
-*main - function that will return the size of different types of things
+* main - function that will return the size of different types of things
 *
-*return- always 0.
+* return- always 0.
 **/
 int main(void)
 {
