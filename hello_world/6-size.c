@@ -2,7 +2,7 @@
 /**
 * main - function that will return the size of different types of things
 *
-* return- always 0.
+* Return: always 0.
 **/
 int main(void)
 {
