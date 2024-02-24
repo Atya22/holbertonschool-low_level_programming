@@ -8,10 +8,10 @@
 
 int main(void)
 {
-char rev_letters
-for (rev_letters = 'z'; rev_letters >= 'a'; rev_letters--)
+char mirror;
+for (mirror = 'z'; mirror >= 'a'; mirror--)
 {
-putchar(rev_letters);
+putchar(mirror);
 }
 putchar('\n');
 return (0);
