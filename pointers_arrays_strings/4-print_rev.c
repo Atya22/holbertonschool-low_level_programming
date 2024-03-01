@@ -4,7 +4,7 @@
 /**
 *print_rev - function that prints a string, in reverse, followed by a new line
 *
-*@s - string to be printed in reverse
+*@s: string to be printed in reverse
 *Return: Always 0.
 */
 
