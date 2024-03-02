@@ -24,8 +24,10 @@ int _atoi(char *s)
 		}
 		else if (s[i] >= 48 && s[i] <= 57)
 		{
+			int current;
 			found = true;
-			res = res * 10 + s[i] - '0';
+			current = s[i] - '0'; 
+			res = res * 10 + current;
 		}
 		else if (found)
 		{
