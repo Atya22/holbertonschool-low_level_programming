@@ -11,8 +11,9 @@
 
 int _atoi(char *s)
 {
-	int res = 0;
+	unsigned int res = 0;
 	int i;
+	int final_res;
 	int sign = 0;
 	bool found = false;
 
@@ -25,8 +26,9 @@ int _atoi(char *s)
 		else if (s[i] >= 48 && s[i] <= 57)
 		{
 			int current;
+
 			found = true;
-			current = s[i] - '0'; 
+			current = s[i] - '0';
 			res = res * 10 + current;
 		}
 		else if (found)
@@ -34,10 +36,15 @@ int _atoi(char *s)
 			break;
 		}
 	}
+
 	if (sign % 2 != 0)
 	{
-		res = res * -1;
+		final_res = res * -1;
 	}
-	return (res);
+	else
+	{
+		final_res = res;
+	}
+	return (final_res);
 }
 
