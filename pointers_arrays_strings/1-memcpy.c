@@ -1,3 +1,4 @@
+#include <main.h>
 /**
 *char *_memcpy - function
 *@dest:var
