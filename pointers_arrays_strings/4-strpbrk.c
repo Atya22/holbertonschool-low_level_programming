@@ -1,5 +1,5 @@
 #include "main.h"
-
+#include <limits.h>
 /**
 *_strpbrk - function that searches a string for any of a set of bytes.
 *@s: holds value
@@ -11,7 +11,7 @@ char *_strpbrk(char *s, char *accept)
 {
 	int i;
 	int j;
-	int min = strlen(s);
+	int min = INT_MAX;
 
 	for (i = 0; accept[i] != '\0'; i++)
 	{
@@ -27,7 +27,7 @@ char *_strpbrk(char *s, char *accept)
 		}
 	}
 
-	if (min == strlen(s))
+	if (min == INT_MAX)
 	{
 		return (NULL);
 	}
