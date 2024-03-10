@@ -1,4 +1,4 @@
-nclude<stdio.h>
+#include<stdio.h>
 
 /**
 * main -entry point,program that prints all
