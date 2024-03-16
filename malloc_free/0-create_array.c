@@ -9,23 +9,23 @@
 *Return: always 0.
 */
 
-char* create_array(unsigned int size, char c)
+char *create_array(unsigned int size, char c)
 {
 	unsigned int i;
-	char* buff;
+	char *buff;
 
 	if (size == 0)
 	{
 		return (NULL);
 	}
 
-	buff = (char*) malloc(size * (sizeof(char)));
+	buff = (char *) malloc(size * (sizeof(char)));
 	if (buff == NULL)
 	{
 		return (NULL);
 	}
 
-	for(i = 0; i < size; i++)
+	for (i = 0; i < size; i++)
 	{
 		buff[i] = c;
 	}
