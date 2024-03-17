@@ -5,28 +5,64 @@
 * @s2: second string
 * Return: null or a pointer to s
 */
+
 char *str_concat(char *s1, char *s2)
 {
-	unsigned int i;
-	char *s;
+	int i, j, a = 0;
+	char *c;
 
-	if (s1 == NULL)
+	if (s1 == 0)
 		s1 = "";
-	if (s2 == NULL)
+	if (s2 == 0)
 		s2 = "";
 
-	s = malloc(sizeof(char) * (strlen(s1) + strlen(s2) + 1));
-	if (s == NULL)
-		return (NULL);
+	for (i = 0; i < s1[i]; i++)
+		;
+	for (j = 0; j < s2[j]; j++)
+		;
+	c = malloc((sizeof(char) * i) + (sizeof(char) * j) + 1);
 
-	for (i = 0; i < strlen(s1); i++)
-		s[i] = s1[i];
-
-	for (i = 0; i < strlen(s2); i++)
+	if (c == NULL)
 	{
-		s[strlen(s1) + i] = s2[i];
+		return (NULL);
+	}
+	while (*s1 != '\0')
+	{
+		c[a] = *s1;
+		s1++;
+		a++;
 	}
 
-	s[strlen(s1) + i] = '\0';
-	return (s);
+	while (*s2 != '\0')
+	{
+		c[a] = *s2;
+		s2++;
+		a++;
+	}
+	c[a] = '\0';
+
+	return (c);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
