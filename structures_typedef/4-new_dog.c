@@ -31,8 +31,12 @@ dog_t *new_dog(char *name, float age, char *owner)
 		return (NULL);
 	}
 
-	strcpy(sec_name, name);
-	strcpy(sec_owner, owner);
+	for (int i = 0; i <= name_length; i++)
+        sec_name[i] = name[i];
+
+    for (int i = 0; i <= owner_length; i++)
+        sec_owner[i] = owner[i];
+
 	sec_dog->name = sec_name;
 	sec_dog->age = age;
 	sec_dog->owner = sec_owner;
