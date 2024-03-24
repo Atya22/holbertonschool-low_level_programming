@@ -10,9 +10,18 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *sec_dog = malloc(sizeof(dog_t));
-	char *sec_name = malloc(strlen(name) + 1);
-	char *sec_owner = malloc(strlen(owner) + 1);
+    int name_length = 0, owner_length = 0;
+	char *sec_name, *sec_owner;
+    dog_t *sec_dog;
+
+    while (name[name_length])
+        name_length++;
+    while (owner[owner_length])
+        owner_length++;
+
+    sec_dog = malloc(sizeof(dog_t));
+    sec_name = malloc(name_length + 1);
+    sec_owner = malloc(owner_length + 1);
 
 	if (sec_dog == NULL || sec_name == NULL || sec_owner == NULL)
 	{
