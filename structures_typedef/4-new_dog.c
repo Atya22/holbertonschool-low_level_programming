@@ -10,19 +10,19 @@
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-    int i;
+	int i;
 	int name_length = 0, owner_length = 0;
 	char *sec_name, *sec_owner;
-    dog_t *sec_dog;
+	dog_t *sec_dog;
 
-    while (name[name_length])
-        name_length++;
-    while (owner[owner_length])
-        owner_length++;
+	while (name[name_length])
+		name_length++;
+	while (owner[owner_length])
+		owner_length++;
 
-    sec_dog = malloc(sizeof(dog_t));
-    sec_name = malloc(name_length + 1);
-    sec_owner = malloc(owner_length + 1);
+	sec_dog = malloc(sizeof(dog_t));
+	sec_name = malloc(name_length + 1);
+	sec_owner = malloc(owner_length + 1);
 
 	if (sec_dog == NULL || sec_name == NULL || sec_owner == NULL)
 	{
@@ -33,10 +33,10 @@ dog_t *new_dog(char *name, float age, char *owner)
 	}
 
 	for (i = 0; i <= name_length; i++)
-        sec_name[i] = name[i];
+		sec_name[i] = name[i];
 
-    for (i = 0; i <= owner_length; i++)
-        sec_owner[i] = owner[i];
+	for (i = 0; i <= owner_length; i++)
+		sec_owner[i] = owner[i];
 
 	sec_dog->name = sec_name;
 	sec_dog->age = age;
