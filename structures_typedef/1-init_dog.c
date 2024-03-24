@@ -1,4 +1,4 @@
-nclude"dog.h"
+#include"dog.h"
 
 /**
 * init_dog -entry point,initializes a variable
