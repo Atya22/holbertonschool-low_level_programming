@@ -1,5 +1,5 @@
 #include"dog.h"
-
+#include <stdio.h>
 /**
 * print_dog -entry point,function that prints a struct
 * @d: -points to repective address
