@@ -1,6 +1,9 @@
 #ifndef HEADER_FILE_H
 #define HEADER_FILE_H
 
+#include <stddef.h>
+#include <stdlib.h>
+#include <string.h>
 /**
 * struct dog -dog data
 * @name: -points to specific data
