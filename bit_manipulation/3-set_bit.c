@@ -7,11 +7,15 @@
  * Return: (a >> index & 1)
  */
 
-int get_bit(unsigned long int n, unsigned int index)
+int set_bit(unsigned long int *n, unsigned int index)
+
 {
-	if (index > sizeof(n) * 8)
-	{
+	int add;
+
+	if (index > 63)
 		return (-1);
-	}
-	return (n >> index & 1);
+	add = 1 << index;
+	*n = *n | add;
+	return (1);
 }
+
